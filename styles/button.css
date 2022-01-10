@@ -25,10 +25,13 @@
 }
 
 .hi {
-     background-color: #555;
+     background-image: linear-gradient(#0087FF, #006CFF);
+     color: white;
 }
 
 .lo {
-     background-color: #aaa;     
+     background-image: linear-gradient(#DCDCDC, #D3D3D3);
+     border-color: #222;
+     color: #444;  
 }
 
