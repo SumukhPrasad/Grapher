@@ -1,0 +1,61 @@
+.graph-controls {
+     position: absolute;
+     background-color: rgba(255, 255, 255, 0.25);
+     border: 1px solid rgba(0, 0, 0, 0.25);
+     border-radius: 15px;
+     backdrop-filter: blur(10px);
+     -moz-backdrop-filter: blur(10px);
+     -o-backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+     padding: 10px;
+     z-index: 10;
+     width: 425px;
+     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+     top: 10px;
+     left: 10px;
+}
+
+.transition-movable {
+     transition: top 0.2s, left 0.2s;
+}
+
+.graph-controls-mover {
+     width: 20px;
+     height: 20px;
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     border-bottom-right-radius: 15px;
+     background-image: url("../images/move.png");
+     cursor: move;
+}
+
+.graph-controls-minimizer {
+     width: 20px;
+     height: 20px;
+     position: absolute;
+     bottom: 2px;
+     right: 20px;
+     opacity: 0.25;
+     cursor: pointer;
+}
+
+.fns {
+     height: 200px;
+     overflow: scroll;
+}
+
+
+.fns-placeholder {
+     display: none; 
+     position: absolute;
+     transform: translate(-50%, -50%);
+     top: 50%;
+     left: 50%;
+     opacity: 0.5;
+     width: 425px;
+}
+
+.fns:empty + .fns-placeholder{
+     display: block;
+}

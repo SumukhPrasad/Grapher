@@ -3,14 +3,14 @@
      border: 0px;
      border-radius: 5px;
      color: #000;
-     box-shadow: 0 3px 10px -8px #000;
+     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
      cursor: pointer;
 }
 
 .grapher-button:active {
      background-image: linear-gradient(#006CFF, #0051FF);
      color: white;
-     box-shadow: 0 3px 10px -8px #000;
+     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
      cursor: pointer;
 }
 
@@ -20,7 +20,7 @@
      border-color: #222;
      border-radius: 5px;
      color: #444;
-     box-shadow: 0 3px 10px -8px #000;
+     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
      cursor: not-allowed;
 }
 

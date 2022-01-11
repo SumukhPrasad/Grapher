@@ -172,7 +172,8 @@ function infoPop(n) {
 	let pop = document.getElementById('infopop');
 	pop.style.opacity = 1;
 	pop.style.zIndex = 12;
-	pop.style.left = '10px';
+	pop.style.right = '10px';
+	pop.style.bottom = '10px';
 	eqCan.parser.radiansQ = this.radQ;
 	eqCan.parser.setVarVal('a', eqCan.aVal);
 	let s = document.getElementById('fn' + n).value;
@@ -191,7 +192,7 @@ function infoPopClose() {
 	let pop = document.getElementById('infopop');
 	pop.style.opacity = 0;
 	pop.style.zIndex = 1;
-	pop.style.left = '-500px';
+	pop.style.right = '-500px';
 }
 
 function togglePts() {
@@ -504,7 +505,7 @@ function canvasPrint() {
 	}
 }
 
-function canvasSave(typ) {
+function save(typ) {
 	typ = (typ == undefined) ? 'png' : typ;
 	if (typ == 'jpg')
 		typ = 'jpeg';
@@ -764,7 +765,7 @@ function nodeDraw(g, node, level) {
 	let boxHt = 25;
 	let xDist = 50;
 	let yDist = 40;
-	let boxClr = '#aaa'
+	let boxClr = '#ccc'
 	let xFudge = -30
 	let xPos = 0
 	if (node.childCount > 0) {
@@ -810,7 +811,7 @@ function nodeDraw(g, node, level) {
 	g.textAlign = 'center';
 	g.fillStyle = '#000';
 	if (node.typ == node.tOP)
-		g.fillStyle = '#555';
+		g.fillStyle = '#888';
 	g.fillText(node.fmt(false), node.x + boxWd / 2 + xFudge, node.y + boxHt / 2 + 6);
 	eqCan.tree.xmax = Math.max(eqCan.tree.xmax, node.x + boxWd + xFudge)
 	eqCan.tree.ymax = Math.max(eqCan.tree.ymax, node.y + boxHt)

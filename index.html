@@ -9,35 +9,50 @@
 		<link rel="stylesheet" href="styles/curtain.css">
 		<link rel="stylesheet" href="styles/body.css">
 		<link rel="stylesheet" href="styles/button.css">
-		<script>
-			var MQ = MathQuill.getInterface(2);
-		</script>
+		<link rel="stylesheet" href="styles/graph-controls.css">
+		<link rel="stylesheet" href="styles/graph-container.css">
+		<link rel="stylesheet" href="styles/graph-infopop.css">
+		
 	</head>
 	<body>
 		<div id="curtain" class="curtain">
 		</div>
-		<div id="canvasContainer">
+		<div id="canvasContainer" class="graph-container">
 		</div>
-		<div id="speed"></div>
-		<div id="fns"></div>
-		<button id="fnSubBtn" class="grapher-button"onclick="fnAdd(false)" >&minus;</button>
-		<button id="fnAddBtn" class="grapher-button"onclick="fnAdd(true)" >+</button>
-		<button id="ptsBtn" class="grapher-button"  onclick="togglePts()" >Points</button>
-		<button id="fitBtn" class="grapher-button"  onclick="zoomFit()" >Fit</button>
-		+ <input type="range" id="r1" class="slider" value="0.5" min="0" max="1" step=".01" oninput="onZoomChg(0,this.value)" onchange="onZoomChg(1,this.value)" /> &minus;
-		<button class="grapher-button"  onclick="zoomReset()" >Reset</button><br>
-		<button class="grapher-button"  onclick="save()" >Save</button>
-		<button class="grapher-button"  onclick="doExample()" >Example</button><br>
-		<button class="grapher-button" onclick="go()" >Go</button>
-		<button id="svgBtn" class="grapher-button"  onclick="SVGShow()">SVG</button>
+		
+		<div id="graph-controls" class="graph-controls">
+			<div class="fns-container">
+				<div class="fns" id="fns">
+				</div>
+				<div class="fns-placeholder">
+					<center>Press the [+] button to add an equation.</center>
+				</div>
+			</div>
+			<button id="fnSubBtn" class="grapher-button"onclick="fnAdd(false)" >&minus;</button>
+			<button id="fnAddBtn" class="grapher-button"onclick="fnAdd(true)" >+</button>
+			<button class="grapher-button"  onclick="doExample()" >Example</button>
+			<button class="grapher-button" onclick="go()" >Go</button><br>
+			<button id="ptsBtn" class="grapher-button"  onclick="togglePts()" >Points</button>
+			<button id="fitBtn" class="grapher-button"  onclick="zoomFit()" >Fit</button><br>
+			Zoom:
+			+ <input type="range" id="r1" class="slider" value="0.5" min="0" max="1" step=".01" oninput="onZoomChg(0,this.value)" onchange="onZoomChg(1,this.value)" /> &minus;
+			<button class="grapher-button"  onclick="zoomReset()" >Reset</button><br>
 
-		<div id="infopop" class="grapher-popup" style="position:absolute; left:-999px; top:100px;  z-index:1;  opacity:0;">
-		<div class="label">
-			Interpreted formula:
+
+			<button class="grapher-button"  onclick="save('png')" >Save</button>
+			<div id="speed"></div>
+			<div class="graph-controls-minimizer" id="graph-controls-minimizer">&minus;</div>
+			<div class="graph-controls-mover" id="graph-controls-mover"> </div>
 		</div>
-		<div id="infobox" class="output"></div>
-		<canvas id="canInfo"></canvas>
-		<button onclick="infoPopClose()">&#x2714;</button>
+
+		<div id="infopop" class="grapher-popup" style="position:absolute; right:-999px; bottom:100px;  z-index:1;  opacity:0;">
+			<div class="label">
+				Interpreted formula:
+			</div>
+			<div id="infobox" class="output"></div>
+			<canvas id="canInfo"></canvas>
+			<button class="infopop-close-button" onclick="infoPopClose()">&#x2714;</button>
+		</div>
 
 		<script src="scripts/main.js"></script>
 		<script src="scripts/helpers.js"></script>

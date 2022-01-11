@@ -2,7 +2,7 @@ let coords;
 let eqCan = {};
 
 function initializeInterface() {
-	let w = (window.innerWidth - 40);
+	let w = (window.innerWidth);
 	let h = (window.innerHeight);
 	eqCan.opts = {
 		fns: 'x^2+y^2=9~'
@@ -39,9 +39,9 @@ function initializeInterface() {
 		coords.yEnd = parseFloat(inStr);
 	coords.calcScale();
 	var s = '<div style="height: ' + eqCan.canvasHt + 'px;" >';
-	s += '<canvas id="canGraph" width="' + eqCan.graphWd + '" height="' + eqCan.graphHt + '" style="position:absolute; z-index:1; background-color: #ffffff; border: 1px solid black;"></canvas>';
-	s += '<canvas id="can" width="' + eqCan.graphWd + '" height="' + eqCan.graphHt + '" style="position:absolute; z-index:1; border: 1px solid black;"></canvas>';
-	s += '<canvas id="canPts" width="' + eqCan.graphWd + '" height="' + eqCan.graphHt + '" style="position:absolute; z-index:1;  border: 1px solid black;"></canvas>';
+	s += '<canvas id="canGraph" width="' + eqCan.graphWd + '" height="' + eqCan.graphHt + '" style="position:absolute; z-index:1; background-color: #ffffff; border: 0;"></canvas>';
+	s += '<canvas id="can" width="' + eqCan.graphWd + '" height="' + eqCan.graphHt + '" style="position:absolute; z-index:1; border: 0;"></canvas>';
+	s += '<canvas id="canPts" width="' + eqCan.graphWd + '" height="' + eqCan.graphHt + '" style="position:absolute; z-index:1;  border: 0;"></canvas>';
 	s += '</div>';
 	document.getElementById('canvasContainer').innerHTML = s;
 	eqCan.cans = [];
@@ -83,6 +83,7 @@ function initializeInterface() {
 	eqCan.examples = ['cos(x)=sin(y)-y', 'sin(sin(x))=cos(sin(xy)+cos(x))', '(x-1)(x+1)=y', 'y=2x', 'sin(x)+cos(y)=0.5', 'sin(x^2)+cos(y)=1', 'sin(y)=x', '(x-y)^2 = 4', 'x^2+y^2=9'];
 	eqCan.exampleNo = 0;
 	makePts();
+	fnAdd(true);
 	go();
 }
 
