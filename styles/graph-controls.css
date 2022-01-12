@@ -40,6 +40,16 @@
      cursor: pointer;
 }
 
+.graph-controls-a11y-big-text {
+     width: 20px;
+     height: 20px;
+     position: absolute;
+     bottom: 2px;
+     right: 40px;
+     opacity: 0.25;
+     cursor: pointer;
+}
+
 .fns {
      height: 200px;
      overflow: scroll;

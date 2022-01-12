@@ -54,6 +54,12 @@ function dragElement(elmnt) {
 		if (window.innerHeight - parseInt(elmnt.style.top) < elmnt.offsetHeight) {
 			elmnt.style.top = window.innerHeight - elmnt.offsetHeight - 10 + "px";
 		}
+		if (parseInt(elmnt.style.top) < 40-elmnt.offsetHeight) {
+			elmnt.style.top = 25-elmnt.offsetHeight + "px";
+		}
+		if (parseInt(elmnt.style.left) < 40-elmnt.offsetWidth) {
+			elmnt.style.left = 25-elmnt.offsetWidth + "px";
+		}
 	}
 }
 
@@ -65,4 +71,8 @@ document.getElementById("graph-controls-minimizer").addEventListener("click", fu
 	setTimeout(() => {
 		document.getElementById("graph-controls").classList.remove("transition-movable");
 	}, 200);
-})
+});
+
+document.getElementById("graph-controls-a11y-big-text").addEventListener("click", function() {
+	document.body.classList.toggle("a11y-big-text")
+});

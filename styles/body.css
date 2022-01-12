@@ -12,3 +12,7 @@ body {
                                   supported by Chrome, Edge, Opera and Firefox */
 
 }
+
+.a11y-big-text {
+  font-size: 20px;
+}
