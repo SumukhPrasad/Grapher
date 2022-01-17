@@ -10,4 +10,4 @@ This program can handle any equation (linear or not) in 2 variables, and is rela
 - Draggable points on the graph (Use the "Points" button to enable them)
 - Equation Trees (To see how your equation was understood by the program, click the (i) button next to the equation.)
 
-Finally, this is only a hobby program I made, and it's by no means anywhere near [Desmos](www.desmos.com). Just enjoy it. This isn't meant for serious work.
+Finally, this is only a hobby program I made, and it's by no means anywhere near [Desmos](https://www.desmos.com). Just enjoy it. This isn't meant for serious work.
